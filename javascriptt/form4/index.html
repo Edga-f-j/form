@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Factorial</title>
+    
+</head>
+<body>
+    <h1>Calcular Factorial</h1>
+    <p>Introduce un número para calcular su factorial:</p>
+
+    <!-- Campo de entrada para el número -->
+    <input type="number" id="numero" required>
+
+    <!-- Botón para ejecutar el cálculo -->
+    <button onclick="calcularFactorial()">Calcular Factorial</button>
+
+    <!-- Resultado del cálculo -->
+    <p id="resultado"></p>
+
+
+    
+    <script>
+        function calcularFactorial() {
+            let numero = parseInt(document.getElementById('numero').value);  // Leer el número ingresado
+            let resultado = 1;  // Inicializar el resultado como 1 (ya que el factorial de 0 es 1)
+            
+            // Verificar si el número es negativo
+            if (numero < 0) {
+                document.getElementById('resultado').innerHTML = "El factorial no está definido para números negativos.";
+                return;
+            }
+            
+            // Calcular el factorial usando un ciclo for
+            for (let i = 1; i <= numero; i++) {
+                resultado *= i;  // Multiplicar el resultado por i en cada iteración
+                // resultado = resultado * i 
+            }
+
+            // Mostrar el resultado
+            document.getElementById('resultado').innerHTML = `El factorial de ${numero} es: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

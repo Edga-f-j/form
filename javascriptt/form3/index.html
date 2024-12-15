@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For</title>
+    
+</head>
+<body>
+
+    <h1>Ejemplo de Ciclo For</h1>
+    <button onclick="mostrarNumeros()">Mostrar Números del 1 al 10</button>
+    
+    <p id="resultado"></p> <!-- Aquí se mostrarán los números -->
+
+    
+    <script>
+
+        function mostrarNumeros() {
+            let resultado = '';  // Variable para almacenar los números
+            // Ciclo for que va desde 1 hasta 10
+            for (let i = 1; i <= 10; i++) {
+                //resultado += i + '<br>'; // Añadir el número a la cadena de resultado
+                resultado = resultado + i + '<br>';
+            }
+
+            // Mostrar los números en el HTML
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
